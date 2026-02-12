@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 30% 97%;
+    --foreground: 340 20% 15%;
+
+    --card: 340 40% 98%;
+    --card-foreground: 340 20% 15%;
+
+    --popover: 340 40% 98%;
+    --popover-foreground: 340 20% 15%;
+
+    --primary: 340 65% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 30% 92%;
+    --secondary-foreground: 280 30% 25%;
+
+    --muted: 340 20% 93%;
+    --muted-foreground: 340 10% 45%;
+
+    --accent: 320 40% 90%;
+    --accent-foreground: 320 40% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 20% 88%;
+    --input: 340 20% 88%;
+    --ring: 340 65% 55%;
+
+    --radius: 1rem;
+
+    /* Valentine custom tokens */
+    --valentine-pink: 340 82% 76%;
+    --valentine-blush: 350 60% 90%;
+    --valentine-lavender: 270 40% 85%;
+    --valentine-warm-white: 30 50% 97%;
+    --valentine-rose: 345 75% 65%;
+    --valentine-gold: 40 80% 65%;
+    --valentine-deep: 340 50% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-pinyon {
+    font-family: 'Pinyon Script', cursive;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-xl border border-white/40 shadow-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--valentine-pink) / 0.6),
+                 0 0 40px hsl(var(--valentine-pink) / 0.3);
+  }
+
+  .valentine-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--valentine-blush)) 0%,
+      hsl(var(--valentine-lavender)) 50%,
+      hsl(var(--valentine-warm-white)) 100%
+    );
+  }
+}
